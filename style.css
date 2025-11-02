@@ -1,0 +1,1089 @@
+*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: poppins 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container{
+        width:100%;
+        height: 100vh;
+        background:linear-gradient(90deg,rgb(8,8,67),rgb(5,1,18),rgb(8,8,67));
+}
+
+.parent{
+        width: 80%;
+        height: 90%;
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: #230845;
+        box-shadow: 5px 5px 20px black;
+        color: #ffffff;
+        overflow: hidden;
+}
+
+.parent nav{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 50px;
+        height: 15%;
+        /* background-color: plum; */
+}
+
+nav h1{
+        font-size: 35px;
+        font-weight: 600;
+        margin-left: 40px;
+        color: #014728;
+        position: relative;
+}
+
+nav h1::before{
+        content: '';
+        width:20px;
+        height: 20px;
+        position: absolute;
+        top: 50%;
+        left: -40px;
+        transform: translateY(-50%);
+        background:linear-gradient(90deg,rgb(28, 9, 114),rgb(214, 214, 255));
+}
+
+nav ul{
+        display: flex;
+
+}
+
+nav ul li{
+        list-style-type: none;
+}
+
+ul li a{
+        text-decoration: none;
+        padding: 5px 20px;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 14px;
+        color: white;
+        transition: 0.5s ease;
+}
+
+ul li a:hover{
+        text-decoration: underline;
+        color: blue;
+        
+}
+
+ul li #sub{
+        text-decoration: none;
+        color: white;
+        background-image: linear-gradient(90deg,#c04848,#480048,#c04848);
+        margin: 10px;
+        padding: 10px 30px;
+        text-align: center;
+        transition: 0.5s;
+        background-size: 200% auto;
+        border-radius: 20px;
+}
+
+ul li #sub:hover{
+        background-position: right center;
+}
+
+.parent .main_content{
+        display: flex;
+        height: 85%;
+
+}
+
+.main_content .left{
+        width: 50%;
+        height: 100%;
+        padding: 40px 80px;
+}
+
+.left h3{
+        font-weight: 600;
+        font-size: 25px;
+        text-transform: uppercase;
+        margin-top: 40px;
+}
+
+.left h1{
+        font-size: 55px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        line-height: 60px;
+        text-transform: uppercase;
+}
+
+.left h1 span{
+        color: yellow;
+}
+
+.left p{
+        font-size: 12px;
+        font-weight: 400;
+
+}
+
+.left h2{
+        text-decoration: underline;
+        margin: 10px 0;
+        font-weight: 500;
+}
+
+.left button{
+        padding: 7px 15px;
+        border-radius: 5px;
+        font-size: 12px;
+        border:none;
+        outline:none;
+        letter-spacing: 1px;
+        margin-top: 40px;
+        background-color: #033677;
+        color: white;
+        cursor: pointer;
+        transition: 0.5s ease;
+}
+
+.left button:hover{
+        background-color: rgb(42,0,93);
+        box-shadow: 0 0 10px white;
+}
+
+.main_content .right{
+        width: 60%;
+        height: 100%;
+        padding-left: 100px;
+        overflow: hidden;
+}
+
+.right img{
+        width: 380px;
+        transform: translateY(-30px);
+        filter: saturate(120%);
+}
+
+.gradient{
+        width: 350px;
+        height: 350px;
+        position: absolute;
+        top: 48%;
+        left: 56%;;
+        border-radius: 50%;
+        background-color: rgb(158,109,255);
+        z-index: -1;
+        filter: blur(50px);
+        box-shadow: 
+        0 0 250px rgb(157,108,255),0 0 200px purple,0 0 150px rgb(204,0,255);
+}
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------card collage------------------------------- */
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------card- scroll------------------ */
+
+.slider {
+    position: relative;
+    width: 60%;
+    overflow: hidden;
+}
+.images {
+    display: flex;
+    width: 100%;
+}
+.images img {
+    height: 400px;
+    width: 100%;
+    transition: all 0.15s ease;
+}
+.images input {
+    display: none;
+}
+.dots {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+.dots label {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: solid #fff 3px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    margin: 5px;
+}
+.dots label:hover {background: #fff;}
+#img1:checked ~ .m1 {
+    margin-left: 0;
+}
+#img2:checked ~ .m2 {
+    margin-left: -100%;
+}
+#img3:checked ~ .m3 {
+    margin-left: -200%;
+}
+#img4:checked ~ .m4 {
+    margin-left: -300%;
+}
+.ctr-accordion{
+    max-width: 1400px;
+    height: 720px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: space-around;
+    gap: 20px;
+    overflow: hidden;
+    margin: 150px auto;
+}
+ 
+.tab{
+    position: relative;
+    width: 20%;
+    height: inherit;
+    padding: 20px;
+    background: rgb(150,150,150);
+    cursor: pointer;
+    transition: width .5s ease;
+    border-radius: 25px;
+}
+ 
+.tab img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    border-radius: 25px;
+}
+ 
+.tab:hover img{
+    opacity: 0.6;
+}
+ 
+.tab:hover{
+    width: 80%;
+}
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+-----------------------form-fill--------------------------- */
+
+/* General Body and Container Styling */
+#form {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f9; /* Light background for the page */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+} */
+
+.college-search-container {
+    background-color: #ffffff; /* White background for the form area */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px; /* Limits the form width on large screens */
+}
+
+h2 {
+    color: #007bff; /* Primary blue color for the heading */
+    text-align: center;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 15px;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Input, Select, and Range Styling */
+.form-control, .range-slider {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+/* Radio Button and Checkbox Styling */
+.form-group input[type="radio"],
+.form-group input[type="checkbox"] {
+    margin-right: 5px;
+    /* Basic styling for better alignment */
+    transform: scale(1.1);
+}
+
+.form-group label[for^="type-"],
+.form-group label[for^="feature-"] {
+    display: inline-block;
+    margin-right: 20px;
+    font-weight: normal;
+}
+
+/* Range Slider Value Display */
+#fee-value {
+    display: inline-block;
+    margin-left: 15px;
+    font-weight: bold;
+    color: #28a745; /* Green color for emphasis */
+}
+
+/* Button Styling */
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 15px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn-primary {
+    background-color: #007bff; /* Blue for the main action */
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Grey for the secondary action (Clear) */
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    transform: translateY(-1px);
+}
+
+/* Styling for the horizontal rule */
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+    margin: 30px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       /* ------------------------6 best collage---------------------------- */
+
+:root {
+    --primary-blue: #1e40af; /* equivalent to primary-blue */
+    --secondary-green: #059669; /* equivalent to secondary-green */
+    --yellow-500: #f59e0b;
+    --purple-500: #8b5cf0;
+    --red-500: #ef4444;
+    --cyan-500: #06b6d4;
+    --gray-900: #111827;
+    --gray-800: #1f2937;
+    --gray-500: #6b7280;
+    --white: #ffffff;
+}
+
+/* 2. Base Typography */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* 3. Main Container Styling (Equivalent to w-full max-w-5xl px-4) */
+#results-section {
+    width: 100%;
+    max-width: 80rem; /* Adjusted for max-w-5xl equivalence */
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 4. Heading Style */
+#results-section h3 {
+    text-align: center;
+    font-size: 1.875rem; /* 3xl */
+    font-weight: 700; /* bold */
+    color: var(--gray-800);
+    margin-bottom: 2.5rem; /* mb-10 */
+    padding-bottom: 1rem; /* pb-4 */
+    border-bottom: 4px solid rgba(5, 150, 105, 0.3); /* border-b-4 border-secondary-green/50 */
+}
+
+/* 5. Card Wrapper (Collage) */
+#card-collage-wrapper {
+    /* No custom styles here, just the container for the grid */
+}
+
+/* 6. Grid Layout (Responsive styles handled by media queries if not using Tailwind) */
+/* For a pure CSS version, you would replace the 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
+   with complex media queries. The current Tailwind classes are a much more concise way to do this. 
+   We will keep it as simple flex/grid fallback here. */
+.grid {
+    display: grid;
+    gap: 2rem; /* gap-8 */
+    /* Default: 1 column on small screens */
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) { /* md: breakpoint */
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)); /* md:grid-cols-2 */
+    }
+}
+
+@media (min-width: 1024px) { /* lg: breakpoint */
+    .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)); /* lg:grid-cols-3 */
+    }
+}
+
+
+/* 7. Individual Card Styles */
+.grid > div {
+    background-color: var(--white);
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
+    padding: 1.5rem; /* p-6 */
+    transition: all 300ms ease; /* transition duration-300 */
+    border-top-width: 4px; /* border-t-4 */
+}
+
+/* Hover effects (Equivalent to hover:shadow-2xl and transform hover:-translate-y-1) */
+.grid > div:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transform: translateY(-4px); 
+}
+
+/* Specific Card Border Colors (Tailwind is more efficient for this) */
+.grid > div:nth-child(1) { border-color: var(--primary-blue); } /* Card 1 */
+.grid > div:nth-child(2) { border-color: var(--secondary-green); } /* Card 2 */
+.grid > div:nth-child(3) { border-color: var(--yellow-500); } /* Card 3 */
+.grid > div:nth-child(4) { border-color: var(--purple-500); } /* Card 4 */
+.grid > div:nth-child(5) { border-color: var(--red-500); } /* Card 5 */
+.grid > div:nth-child(6) { border-color: var(--cyan-500); } /* Card 6 */
+
+/* Card Button Styles (Equivalent to bg-primary-blue text-white py-2 rounded-lg...) */
+.grid a.block {
+    margin-top: 1rem;
+    display: block;
+    text-align: center;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 150ms ease;
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 500;
+}
+
+.grid a.block:hover {
+    background-color: #1d4ed8; /* A slightly darker blue for hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+/* ---------------------------------map---------------------------- */
+
+/* Add to your existing styles.css */
+
+/* Map Container Styling */
+.college-map-container {
+    background-color: #f0f0f5; /* Slightly darker background to separate it from the form */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 700px;
+    margin-top: 30px; /* Space between the search form and the map */
+}
+
+.college-map-container h3 {
+    color: #495057;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+/* Styling for the div that holds the iframe */
+#up-map-location {
+    /* Ensures the map is responsive */
+    overflow: hidden;
+    position: relative;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (9/16 * 100) */
+    height: 0;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+}
+
+/* Make the Iframe fill its container */
+#up-map-location iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.map-note {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------image scrolle------------------------ */
+
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(82, 60%, 28%);
+  --title-color: hsl(0, 0%, 15%);
+  --text-color: hsl(0, 0%, 35%);
+  --body-color: hsl(0, 0%, 95%);
+  --container-color: hsl(0, 0%, 100%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --h2-font-size: 1.25rem;
+  --small-font-size: .813rem;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1120px) {
+  :root {
+    --h2-font-size: 1.5rem;
+    --small-font-size: .875rem;
+  }
+}
+
+/*=============== BASE ===============*/
+
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== CARD ===============*/
+.container {
+  display: grid;
+  place-items: center;
+  margin-inline: 1.5rem;
+  padding-block: 5rem;
+}
+
+.card__container {
+  display: grid;
+  row-gap: 3.5rem;
+}
+
+.card__article {
+  position: relative;
+  overflow: hidden;
+}
+
+.card__img {
+  width: 328px;
+  border-radius: 1.5rem;
+}
+
+.card__data {
+  width: 280px;
+  background-color: var(--container-color);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+  border-radius: 1rem;
+  position: absolute;
+  bottom: -9rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  opacity: 0;
+  transition: opacity 1s 1s;
+}
+
+.card__description {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: .25rem;
+}
+
+.card__title {
+  font-size: var(--h2-font-size);
+  font-weight: 500;
+  color: var(--title-color);
+  margin-bottom: .75rem;
+}
+
+.card__button {
+  text-decoration: none;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  color: var(--first-color);
+}
+
+.card__button:hover {
+  text-decoration: underline;
+}
+
+/* Naming animations in hover */
+.card__article:hover .card__data {
+  animation: show-data 1s forwards;
+  opacity: 1;
+  transition: opacity .3s;
+}
+
+.card__article:hover {
+  animation: remove-overflow 2s forwards;
+}
+
+.card__article:not(:hover) {
+  animation: show-overflow 2s forwards;
+}
+
+.card__article:not(:hover) .card__data {
+  animation: remove-data 1s forwards;
+}
+
+/* Card animation */
+@keyframes show-data {
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(-7rem);
+  }
+}
+
+@keyframes remove-overflow {
+  to {
+    overflow: initial;
+  }
+}
+
+@keyframes remove-data {
+  0% {
+    transform: translateY(-7rem);
+  }
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(.5rem);
+  }
+}
+
+@keyframes show-overflow {
+  0% {
+    overflow: initial;
+    pointer-events: none;
+  }
+  50% {
+    overflow: hidden;
+  }
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 340px) {
+  .container {
+    margin-inline: 1rem;
+  }
+
+  .card__data {
+    width: 250px;
+    padding: 1rem;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 768px) {
+  .card__container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1120px) {
+  .container {
+    height: 100vh;
+  }
+
+  .card__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card__img {
+    width: 348px;
+  }
+  .card__data {
+    width: 316px;
+    padding-inline: 2.5rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------footer-------------------------------- */
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: auto;
+    background-color: #2d2e33;
+    padding: 60px 10%;
+}
+
+ul{
+    list-style: none;
+}
+
+.footer-col{
+    width: 25%;
+}
+
+.footer-col h4{
+    position: relative;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 22px;
+    color: #f1bc0d;
+    text-transform: capitalize;
+}
+
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    background-color: #27c0ac;
+    height: 2px;
+    width: 40px;
+}
+
+ul li:not(:last-child){
+    margin-bottom: 8px;
+}
+
+ul li a{
+    display: block;
+    font-size: 19px;
+    text-transform: capitalize;
+    color: #bdb6b6;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+ul li a:hover{
+    color: white;
+    padding-left: 2px;
+}
+
+.links a{
+    display: inline-block;
+    height: 44px;
+    width: 44px;
+    color: white;
+    background-color: rgba(40, 130, 214, 0.8);
+    margin: 0 8px 8px 0;
+    text-align: center;
+    line-height: 44px;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.links a:hover{
+    color: #4d4f55;
+    background-color: white;
+}
+
+@media(max-width: 740px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .footer-col h4::before{
+        all: unset;
+    }
+}
+
+@media(max-width: 555px){
+    .footer-col{
+        width: 100%;
+    }
+}
+
+
+/* --------------------------------------------------hr----------- */
+
+
+hr{
+	 border: 10px solid black;
+}
