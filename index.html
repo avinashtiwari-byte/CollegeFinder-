@@ -1,389 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link href="style.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-	 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-	 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Finder</title>
+    <link href="style2.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
 
 
 
+    <style>
+    /*---- Form Section ---------- */
+    .form-container {
+      background: #fff;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      color: #004aad;
+      margin-bottom: 1.5rem;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem 2rem;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    select:focus, input:focus {
+      outline: none;
+      border-color: #004aad;
+    }
+
+    .full-width {
+      grid-column: span 2;
+    }
+
+    button {
+      background: #004aad;
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #003580;
+    }
+    
+    /* ---------- Responsive ---------- */
+    @media (max-width: 768px) {
+      form {
+        grid-template-columns: 1fr;
+      }
+
+      header h1 {
+        font-size: 1.6rem;
+      }
+
+      .form-container {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+    }
+  </style>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        
+        /* Custom styles for the search form to override Tailwind base if needed */
+        .form-control:focus {
+            --tw-ring-color: #1e40af; /* primary-blue */
+        }
+
+        /* Responsive Iframe Container for Map */
+        #up-map-location {
+            overflow: hidden;
+            position: relative;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            border-radius: 0.75rem; /* rounded-xl */
+        }
+
+        #up-map-location iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 
 
-
-
-	 
-     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-</head>
+    </head>
 <body>
 
-
-
-	<div class="container">
-      <div class="parent">
-        <div class="gradient"></div>
-        <nav>
-          <h1>Collage Finder</h1>
-          <ul>
-            <li><a href="">home</a></li>
-            <li><a href="">about us</a></li>
-            <li><a href="">contact us</a></li>
-            <li><a href="">Details</a></li>
-            <li><a href="" id="sub">Find Know</a></li>
-          </ul>
-        </nav>
-        <div class="main_content">
+    <div class="container">
+        <div class="parent">
+            <div class="gradient"></div> 
+            
+            <nav>
+                <h1>Collage Finder</h1>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#details">Details</a></li>
+                    <li><a href="" id="sub">Find Know</a></li>
+                </ul>
+            </nav>
+            
+            <div class="main_content" id="hero">
                 <div class="left">
-                        <h3>Best</h3>
-                        <h1><span>COLLAGES</span></h1>
-                        <h1>Future Is here </h1>
-                        <h4><u>Find by your Categories</u></h4>
-                        <p>The Easiest Route to the Right College.</p>
-                        <button>READ MORE</button>
-
+                    <h3>Best</h3>
+                    <h1><span>COLLAGES</span></h1>
+                    <h1>Future Is here </h1>
+                    <h4><u>Find by your Categories</u></h4>
+                    <p>The Easiest Route to the Right College.</p>
+                    <button>READ MORE</button>
                 </div>
                 <div class="right">
-                        <img src="mushroom.png
-						" alt="">
+                    <img src="mushroom.png" alt="Abstract image representing colleges/education"> 
                 </div>
+            </div>
         </div>
-      </div>
     </div>
-
-
-
-<!-- ----------------------------------------------card collage--------------------------- -->
-
-<div>
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src="csjmu.jpg" alt="Avatar" style="width:300px;height:300px;">
-    </div>
-    <br>
-    <div class="flip-card-back">
-      <h1>csjmu</h1>
-      <p>Architect & Engineer</p>
-      <p>We love that guy</p>
-    </div>
-  </div>
-</div>
-<br>
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src="Kit.jpg" alt="Avatar" style="width:300px;height:300px;">
-    </div>
-    <br>
-    <div class="flip-card-back">
-      <h1>kit</h1>
-      <p>Architect & Engineer</p>
-      <p>We love that guy</p>
-    </div>
-  </div>
-</div>
-<br>
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
-    </div>
-    <div class="flip-card-back">
-      <h1>John Doe</h1>
-      <p>Architect & Engineer</p>
-      <p>We love that guy</p>
-    </div>
-  </div>
-</div>
-<br>
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
-    </div>
-    <div class="flip-card-back">
-      <h1>John Doe</h1>
-      <p>Architect & Engineer</p>
-      <p>We love that guy</p>
-    </div>
-  </div>
-</div>
-</div> 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- ------------------------------animation card------------------------------ -->
-
-
-		<h1>Collage Finder</h1>
-      <div class="container">
-         <div class="card__container">
-            <article class="card__article">
-               <img src="csjmu.jpg" alt="image" class="card__img">
-
-               <div class="card__data">
-                  <span class="card__description">Vancouver Mountains, Canada</span>
-                  <h2 class="card__title">The Great Path</h2>
-                  <a href="#" class="card__button">Read More</a>
-               </div>
-            </article>
-
-            <article class="card__article">
-               <img src="axis.jpg" alt="image" class="card__img">
-
-               <div class="card__data">
-                  <span class="card__description">Poon Hill, Nepal</span>
-                  <h2 class="card__title">Starry Night</h2>
-                  <a href="#" class="card__button">Read More</a>
-               </div>
-            </article>
-
-            <article class="card__article">
-               <img src="Kit.jpg" alt="image" class="card__img">
-
-               <div class="card__data">
-                  <span class="card__description">Bojcin Forest, Serbia</span>
-                  <h2 class="card__title">Path Of Peace</h2>
-                  <a href="#" class="card__button">Read More</a>
-               </div>
-            </article>
-         </div>
-      </div>
-      <div class="container">
-         <div class="card__container">
-            <article class="card__article">
-               <img src="csjmu.jpg" alt="image" class="card__img">
-
-               <div class="card__data">
-                  <span class="card__description">Vancouver Mountains, Canada</span>
-                  <h2 class="card__title">The Great Path</h2>
-                  <a href="#" class="card__button">Read More</a>
-               </div>
-            </article>
-
-            <article class="card__article">
-               <img src="axis.jpg" alt="image" class="card__img">
-
-               <div class="card__data">
-                  <span class="card__description">Poon Hill, Nepal</span>
-                  <h2 class="card__title">Starry Night</h2>
-                  <a href="#" class="card__button">Read More</a>
-               </div>
-            </article>
-
-            <article class="card__article">
-               <img src="Kit.jpg" alt="image" class="card__img">
-
-               <div class="card__data">
-                  <span class="card__description">Bojcin Forest, Serbia</span>
-                  <h2 class="card__title">Path Of Peace</h2>
-                  <a href="#" class="card__button">Read More</a>
-               </div>
-            </article>
-         </div>
-      </div>
-
-	  <hr><hr>
-  
-
-
-
-
-
-
-
-
-
-
-
-<!-- --------------------------------image scroll----------------------------- -->
-	  
-<h1>Collage Finder</h1> 
-
-	
-       <div class="ctr-accordion">
-            <div class="tab">
-                <img src="csjmu.jpg">
-            </div>
-            <div class="tab">
-                <img src="Kit.jpg">
-            </div>
-            <div class="tab">
-                <img src="logo.jpeg">
-            </div>
-            <div class="tab">
-                <img src="axis.jpg">
-            </div>
-            <div class="tab">
-                <img src="logo.jpeg">
-            </div>
-       </div>
-   
-  
-	
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		<hr>
-	<h1>Collage Finder</h1>
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
- 
     
-     
-<!-- ----------------------------------form---------------------------------- -->
 
-<div id="form">
-    <div class="college-search-container">
-        <h2>Find Your College</h2>
+
+
+
+
+    <div>
+    <section class="section-padding" id="collage-flip-cards">
+        <h1 class="section-heading">Government Colleges</h1>
         
-        <form action="/search-colleges" method="GET" id="college-search-form">
+        <div class="card-grid-container"> 
             
-            <div class="form-group">
-                <label for="keyword">Search by College Name or City:</label>
-                <input type="text" id="keyword" name="keyword" placeholder="e.g., 'Stanford', 'Mumbai', 'Engineering'" class="form-control">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <a href="https://www.iitk.ac.in/" target="_blank"><img src="iit.webp" alt="csjmu college image" class="card-image-responsive">
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>IIT Kanpur</h1>
+                        <p>Indian Institute of Technology Kanpur</p>
+                        <p>A globally renowned public technical university.</p></a>
+                    </div>
+                </div>
             </div>
 
-            <hr>
-
-            <div class="form-group">
-                <label for="course">Course/Field of Study:</label>
-                <select id="course" name="course" class="form-control">
-                    <option value="">-- Select Course --</option>
-                    <option value="engineering">Engineering (B.Tech/M.Tech)</option>
-                    <option value="medicine">Medicine (MBBS/MD)</option>
-                    <option value="arts_science">Arts & Science (B.A./B.Sc.)</option>
-                    <option value="commerce">Commerce (B.Com)</option>
-                    <option value="management">Management (BBA/MBA)</option>
-                    <option value="law">Law (LLB)</option>
-                </select>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                       <a href="https://hbtu.ac.in/" target="_blank"> <img src="hbti.webp" alt="Kit college image" class="card-image-responsive"> 
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>HBTU</h1>
+                        <p>Harcourt Butler Technical University</p>
+                        <p>A state government technical university.</p></a>
+                    </div>
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="location">Location/State:</label>
-                <select id="location" name="location" class="form-control">
-                    <option value="">-- Select Location --</option>
-                    <option value="new_york">New York</option>
-                    <option value="california">California</option>
-                    <option value="texas">Texas</option>
-                    <option value="maharashtra">Maharashtra (India)</option>
-                    <option value="ontario">Ontario (Canada)</option>
-                    </select>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <a href="https://csauk.ac.in/en" target="_blank"><img src="csa.jpg" alt="Avatar image placeholder" class="card-image-responsive">
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>CSAUA&T</h1>
+                        <p>Chandra Shekhar Azad University of Agriculture and Technology</p>
+                        <p>A state government agricultural university.</p></a>
+                    </div>
+                </div>
             </div>
 
-            <div class="form-group">
-                <label>College Type:</label><br>
-                <input type="radio" id="type-public" name="type" value="public">
-                <label for="type-public">Public/Government</label>
-
-                <input type="radio" id="type-private" name="type" value="private">
-                <label for="type-private">Private</label>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <a href="https://gsvmmedicalcollege.com/" target="_blank"><img src="gvms.webp" alt="Avatar image placeholder" class="card-image-responsive">
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>GSVM Medical College</h1>
+                        <p>Ganesh Shankar Vidyarthi Memorial Medical College</p>
+                        <p>A state government medical college.</p></a>
+                    </div>
+                </div>
             </div>
-
-            <div class="form-group">
-                <label for="fee-max">Maximum Annual Fee (in thousands, e.g., $10k - $50k):</label>
-                <input type="range" id="fee-max" name="fee_max" min="10" max="100" value="50" step="5" class="range-slider">
-                <span id="fee-value">50k</span>
-            </div>
-
-            <div class="form-group">
-                <label>Features:</label><br>
-                <input type="checkbox" id="feature-hostel" name="feature[]" value="hostel">
-                <label for="feature-hostel">Hostel Facility</label>
-
-                <input type="checkbox" id="feature-placement" name="feature[]" value="placement">
-                <label for="feature-placement">Strong Placement</label>
-            </div>
-            
-            <hr>
-
-            <button type="submit" class="btn-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.397l3.296 3.296a1 1 0 0 0 1.414-1.414l-3.296-3.296zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                </svg>
-                Search Colleges
-            </button>
-            <button type="reset" class="btn-secondary">Clear Filters</button>
-
-        </form>
+        </div>
+    </section>
     </div>
-</div>
+
+
+
+
+
+
+    <div id="color">
+        <h1 class="section-heading">Top private colleges</h1>
+        <div class="responsive-card-wrapper"> 
+            <div class="card__container">
+                <a href="https://www.psit.ac.in/" target="_blank"><article class="card__article"><img src="psit.webp" alt="image" class="card__img"><div class="card__data"><span class="card__description">Pranveer Singh Institute of Technology</span><h2 class="card__title">The Great Path</h2><a href="#" class="card__button">Read More</a></div></article></a>
+                <a href="https://kgikanpur.in/" target="_blank"><article class="card__article"><img src="krishna.avif" alt="image" class="card__img"><div class="card__data"><span class="card__description">Krishna Group of Institutions</span><h2 class="card__title">Starry Night</h2><a href="#" class="card__button">Read More</a></div></article></a>
+                <a href="https://www.kit.ac.in/" target="_blank"><article class="card__article"><img src="Kit.jpg" alt="image" class="card__img"><div class="card__data"><span class="card__description">Kanpur Institute of Technology</span><h2 class="card__title">Path Of Peace</h2><a href="#" class="card__button">Read More</a></div></article></a>
+            </div>
+        </div>
+        
+        <div class="responsive-card-wrapper">
+            <div class="card__container">
+                <a href="https://www.mpgi.edu.in/" target="_blank"><article class="card__article"><img src="mpgi.webp" alt="image" class="card__img"><div class="card__data"><span class="card__description">Maharana Pratap Group of Institutions</span><h2 class="card__title">The Great Path</h2><a href="#" class="card__button">Read More</a></div></article></a>
+                <a href="https://damsindia.org/" target="_blank"><article class="card__article"><img src="dams.jpg" alt="image" class="card__img"><div class="card__data"><span class="card__description">Dayanand Academy of Management Studies</span><h2 class="card__title">Starry Night</h2><a href="#" class="card__button">Read More</a></div></article></a>
+                <a href="https://www.narainagroup.ac.in/page/Naraina-College-of-Engineering-and-Technology" target="_blank"></a><article class="card__article"><img src="naraina.avif" alt="image" class="card__img"><div class="card__data"><span class="card__description">Naraina College of Engineering & Technology</span><h2 class="card__title">Path Of Peace</h2><a href="#" class="card__button">Read More</a></div></article>
+            </div>
+        </div>
+        </div>
 
 
 
@@ -396,197 +252,571 @@
 
 
 
+    <div>
+    <section class="section-padding" id="top-indian-colleges">
+        <marquee><h2 class="section-heading">🌟 Top 10 Indian Colleges (NIRF Ranking)</h2></marquee>
+        
+        <div class="card-grid-10-wrapper">
+
+            <div class="college-card">
+                <div class="card-header bg-iit">
+                    <span class="rank">#1</span>
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">IIT Madras</h4>
+                    <p class="card-type">Indian Institute of Technology</p>
+                    <p class="card-location">Chennai, Tamil Nadu</p>
+                    <ul class="card-details">
+                        <li>**Rank:** #1 NIRF Engineering</li>
+                        <li>**Avg. Salary:** ₹ 21.48 LPA</li>
+                        <li>**Courses:** B.Tech, M.Tech, Ph.D.</li>
+                    </ul>
+                    <a href="#" class="btn-detail">Explore Programs</a>
+                </div>
+            </div>
+
+            <div class="college-card">
+                <div class="card-header bg-aiims">
+                    <span class="rank">#2</span>
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">AIIMS Delhi</h4>
+                    <p class="card-type">All India Institute of Medical Sciences</p>
+                    <p class="card-location">New Delhi, Delhi</p>
+                    <ul class="card-details">
+                        <li>**Rank:** #1 NIRF Medical</li>
+                        <li>**Annual Intake:** MBBS 125 seats</li>
+                        <li>**Courses:** MBBS, MD, M.Ch.</li>
+                    </ul>
+                    <a href="#" class="btn-detail">Explore Programs</a>
+                </div>
+            </div>
+
+            <div class="college-card">
+                <div class="card-header bg-iim">
+                    <span class="rank">#3</span>
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">IIM Ahmedabad</h4>
+                    <p class="card-type">Indian Institute of Management</p>
+                    <p class="card-location">Ahmedabad, Gujarat</p>
+                    <ul class="card-details">
+                        <li>**Rank:** #1 NIRF Management</li>
+                        <li>**Avg. Salary:** ₹ 32.79 LPA</li>
+                        <li>**Courses:** PGP (MBA), PGPX</li>
+                    </ul>
+                    <a href="#" class="btn-detail">Explore Programs</a>
+                </div>
+            </div>
+
+            <div class="college-card">
+                <div class="card-header bg-miranda">
+                    <span class="rank">#4</span>
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Miranda House</h4>
+                    <p class="card-type">University of Delhi College</p>
+                    <p class="card-location">New Delhi, Delhi</p>
+                    <ul class="card-details">
+                        <li>**Rank:** #1 NIRF College</li>
+                        <li>**Cut-off:** Up to 99%</li>
+                        <li>**Courses:** B.A. (Hons.), B.Sc. (Hons.)</li>
+                    </ul>
+                    <a href="#" class="btn-detail">Explore Programs</a>
+                </div>
+            </div>
+
+            <div class="college-card">
+                <div class="card-header bg-jnu">
+                    <span class="rank">#5</span>
+                    <i class="fas fa-university"></i>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">JNU</h4>
+                    <p class="card-type">Jawaharlal Nehru University</p>
+                    <p class="card-location">New Delhi, Delhi</p>
+                    <ul class="card-details">
+                        <li>**Rank:** #2 NIRF University</li>
+                        <li>**Focus:** Humanities & Sciences</li>
+                        <li>**Courses:** MA, M.Phil., Ph.D.</li>
+                    </ul>
+                    <a href="#" class="btn-detail">Explore Programs</a>
+                </div>
+            </div>
+            
+            <div class="college-card">
+                <div class="card-header bg-nlsiu">
+                    <span class="rank">#6</span>
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">NLSIU</h4>
+                    <p class="card-type">National Law School of India Univ.</p>
+                    <p class="card-location">Bengaluru, Karnataka</p>
+                    <ul class="card-details">
+                        <li>**Rank:** #1 NIRF Law</li>
+                        <li>**Admission:** CLAT Score</li>
+                        <li>**Courses:** B.A. LLB (Hons.), LLM</li>
+                    </ul>
+                    <a href="#" class="btn-detail">Explore Programs</a>
+                </div>
+            </div>
+            
+            <div class="college-card">
+                <div class="card-header bg-iisc">
+                    <span class="rank">#7</span>
+                    <i class="fas fa-microscope"></i>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">IISc Bengaluru</h4>
+                    <p class="card-type">Indian Institute of Science</p>
+                    <p class="card-location">Bengaluru, Karnataka</p>
+                    <ul class="card-details">
+                        <li>**Rank:** #1 NIRF Research</li>
+                        <li>**Focus:** Science & Engineering</li>
+                        <li>**Courses:** M.Tech, M.Des, Ph.D.</li>
+                    </ul>
+                    <a href="#" class="btn-detail">Explore Programs</a>
+                </div>
+            </div>
+            
+            <div class="college-card">
+                <div class="card-header bg-iit-delhi">
+                    <span class="rank">#8</span>
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">IIT Delhi</h4>
+                    <p class="card-type">Indian Institute of Technology</p>
+                    <p class="card-location">New Delhi, Delhi</p>
+                    <ul class="card-details">
+                        <li>**Rank:** #2 NIRF Engineering</li>
+                        <li>**Top Recruiters:** Microsoft, Google</li>
+                        <li>**Courses:** B.Tech, M.Tech, Ph.D.</li>
+                    </ul>
+                    <a href="#" class="btn-detail">Explore Programs</a>
+                </div>
+            </div>
+            
+            <div class="college-card">
+                <div class="card-header bg-bhu">
+                    <span class="rank">#9</span>
+                    <i class="fas fa-globe-asia"></i>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Banaras Hindu University (BHU)</h4>
+                    <p class="card-type">Central University</p>
+                    <p class="card-location">Varanasi, Uttar Pradesh</p>
+                    <ul class="card-details">
+                        <li>**Rank:** #5 NIRF University</li>
+                        <li>**Established:** 1916</li>
+                        <li>**Courses:** Arts, Science, Commerce, Law</li>
+                    </ul>
+                    <a href="#" class="btn-detail">Explore Programs</a>
+                </div>
+            </div>
+            
+            <div class="college-card">
+                <div class="card-header bg-niper">
+                    <span class="rank">#10</span>
+                    <i class="fas fa-syringe"></i>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">NIPER Mohali</h4>
+                    <p class="card-type">National Institute of Pharmaceutical</p>
+                    <p class="card-location">SAS Nagar, Punjab</p>
+                    <ul class="card-details">
+                        <li>**Rank:** #1 NIRF Pharmacy</li>
+                        <li>**M.Pharm Intake:** 250+</li>
+                        <li>**Courses:** M.S. (Pharm.), Ph.D.</li>
+                    </ul>
+                    <a href="#" class="btn-detail">Explore Programs</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    </div>
 
 
 
-<!-- ----------------------------------6 best collage----------------------- -->
+
+    <h1>Collage belongs to </h1>
+    
+    <table>
+        
+        <tr>
+            <td>
+                <a href="https://www.mnnit.ac.in/" target="_blank"><img src="mnit.webp" alt="Description of Item 1"></a>
+                <div class="description">
+                    Motilal Nehru National Institute of Technology Allahabad (MNNIT or NIT Allahabad)
+                </div>
+            </td>
+            
+            <td>
+                <a href="https://www.iiita.ac.in/" target="_blank"><img src="iiit.webp" alt="Description of Item 2"></a>
+                <div class="description">
+                   Indian Institute of Information Technology Allahabad (IIITA) 
+                </div>
+            </td>
+            
+            <td>
+                <a href="https://iiitl.ac.in/" target="_blank"><img src="luck.webp" alt="Description of Item 3"></a>
+                <div class="description">
+                    Indian Institute of Information Technology, Lucknow
+                </div>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <a href="https://rgipt.ac.in/" target="_blank"><img src="rgipt.jpg" alt="Description of Item 4"></a>
+                <div class="description">
+                    Rajiv Gandhi Institute of Petroleum Technology
+                </div>
+            </td>
+            
+            <td>
+                <a href="https://www.jiit.ac.in/" target="_blank"><img src="jiit.jpg" alt="Description of Item 5"></a>
+                <div class="description">
+                   Jaypee Institute of Information Technology, Noida (JIIT Noida)
+                </div>
+            </td>
+            
+            <td>
+                <a href="https://aktu.ac.in/" target="_blank"><img src="aktu.jpg" alt="Description of Item 6"></a>
+                <div class="description">
+                    Dr.A.P.J. Abdul Kalam Technical University, Uttar Pradesh
+                </div>
+            </td>
+        </tr>
+        
+
+        <tr>
+            <td>
+                <a href="https://www.galgotiasuniversity.edu.in/" target="_blank"><img src="galgotia.webp" alt="Description of Item 7"></a>
+                <div class="description">
+                    Galgotias University Greater Noida
+                </div>
+            </td>
+            
+            <td>
+                <a href="https://ddugu.ac.in/newweb/" target="_blank"><img src="ddu.webp" alt="Description of Item 8"></a>
+                <div class="description">
+                   Deen Dayal Upadhyay Gorakhpur University
+                </div>
+            </td>
+            
+            <td>
+                <a href="https://www.knit.ac.in/en" target="_blank"><img src="kml.webp" alt="Description of Item 9"></a>
+                <div class="description">
+                    Kamla Nehru Institute of Technology, Sultanpur (U.P.) - KNIT
+                </div>
+            </td>
+        </tr>
+        
+    </table>
+
+
+
+
+
+
+
+    <div id="color2">
+    <section class="section-padding" id="image-accordion">
+        <h1 class="section-heading">Campus Highlights</h1> 
+        
+        <div class="ctr-accordion">
+            <div class="tab"><img src="csjmu.jpg" alt="Campus view 1"></div>
+            <div class="tab"><img src="Kit.jpg" alt="Campus view 2"></div>
+            <div class="tab"><img src="psit.webp" alt="Campus view 3"></div>
+            <div class="tab"><img src="axis.jpg" alt="Campus view 4"></div>
+            <div class="tab"><img src="mpgi.webp" alt="Campus view 5"></div>
+        </div>
+    </section>
+    </div>
+
+
+
+
 
 
     
-
-<div id="card-collage-wrapper">
-    <!-- Responsive Grid for College Cards: 1 column on mobile, 2 on tablet, 3 on desktop -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-        <!-- Card 1: Leading University -->
-        <div class="bg-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 p-6 border-t-4 border-primary-blue transform hover:-translate-y-1">
-            <div class="flex items-center mb-3">
-                <span class="text-3xl text-primary-blue mr-3">🎓</span>
-                <h4 class="text-xl font-semibold text-gray-900">Institute of Technology, Lucknow</h4>
+        <div id="form">
+            <div class="college-search-container">
+                <h2>Find Your College</h2>
+                
+                <form action="/search-colleges" method="GET" id="college-search-form">
+                    <div class="form-group"><label for="keyword">Search by College Name or City:</label><input type="text" id="keyword" name="keyword" placeholder="e.g., 'Stanford', 'Mumbai', 'Engineering'" class="form-control"></div>
+                    <div class="form-group"><label for="course">Course/Field of Study:</label><select id="course" name="course" class="form-control">
+                        <option value="">-- Select Course --</option><option value="engineering">Engineering (B.Tech/M.Tech)</option><option value="medicine">Medicine (MBBS/MD)</option><option value="arts_science">Arts & Science (B.A./B.Sc.)</option><option value="commerce">Commerce (B.Com)</option><option value="management">Management (BBA/MBA)</option><option value="law">Law (LLB)</option>
+                    </select></div>
+                    <div class="form-group"><label for="location">Location/State:</label><select id="location" name="location" class="form-control">
+                        <option value="">-- Select Location --</option><option value="new_york">New York</option><option value="california">California</option><option value="texas">Texas</option><option value="maharashtra">Maharashtra (India)</option><option value="ontario">Ontario (Canada)</option>
+                    </select></div>
+                    <div class="form-group">
+                        <label>College Type:</label><br>
+                        <input type="radio" id="type-public" name="type" value="public"><label for="type-public">Public/Government</label>
+                        <input type="radio" id="type-private" name="type" value="private"><label for="type-private">Private</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="fee-max">Maximum Annual Fee (in thousands, e.g., $10k - $50k):</label>
+                        <input type="range" id="fee-max" name="fee_max" min="10" max="100" value="50" step="5" class="range-slider">
+                        <span id="fee-value">50k</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Features:</label><br>
+                        <input type="checkbox" id="feature-hostel" name="feature[]" value="hostel"><label for="feature-hostel">Hostel Facility</label>
+                        <input type="checkbox" id="feature-placement" name="feature[]" value="placement"><label for="feature-placement">Strong Placement</label>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.397l3.296 3.296a1 1 0 0 0 1.414-1.414l-3.296-3.296zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                        Search Colleges
+                    </button>
+                    <button type="reset" class="btn-secondary">Clear Filters</button>
+                </form>
             </div>
-            <p class="text-sm text-gray-500 mb-2">Public Engineering College</p>
-            <p class="text-lg font-bold text-secondary-green mb-4">₹ 95k / Year</p>
-            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
-                <li>Rank: #5 in UP Engineering</li>
-                <li>Accreditation: NAAC 'A' Grade</li>
-                <li>Courses: B.Tech, M.Tech (CSE, ECE)</li>
-            </ul>
-            <a href="#" class="mt-4 block text-center bg-primary-blue text-white py-2 rounded-lg hover:bg-blue-600 transition duration-150 text-sm font-medium">View Details</a>
         </div>
 
-        <!-- Card 2: Private Medical College -->
-        <div class="bg-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 p-6 border-t-4 border-secondary-green transform hover:-translate-y-1">
-            <div class="flex items-center mb-3">
-                <span class="text-3xl text-secondary-green mr-3">⚕️</span>
-                <h4 class="text-xl font-semibold text-gray-900">Dr. Ram Institute of Medical Sciences</h4>
-            </div>
-            <p class="text-sm text-gray-500 mb-2">Private Medical Institution</p>
-            <p class="text-lg font-bold text-secondary-green mb-4">₹ 350k / Year</p>
-            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
-                <li>Rank: Top 10 Private MBBS</li>
-                <li>Affiliation: State Medical University</li>
-                <li>Courses: MBBS, MD, Nursing</li>
-            </ul>
-            <a href="#" class="mt-4 block text-center bg-primary-blue text-white py-2 rounded-lg hover:bg-blue-600 transition duration-150 text-sm font-medium">View Details</a>
-        </div>
+         <section class="form-container">
+    <h2>Enter Your Details to Find Colleges</h2>
 
-        <!-- Card 3: Management Institute -->
-        <div class="bg-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 p-6 border-t-4 border-yellow-500 transform hover:-translate-y-1">
-            <div class="flex items-center mb-3">
-                <span class="text-3xl text-yellow-600 mr-3">💼</span>
-                <h4 class="text-xl font-semibold text-gray-900">Noida School of Business Studies</h4>
-            </div>
-            <p class="text-sm text-gray-500 mb-2">Premier Management College</p>
-            <p class="text-lg font-bold text-secondary-green mb-4">₹ 210k / Year</p>
-            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
-                <li>Rank: Top 3 BBA/MBA</li>
-                <li>Accreditation: AICTE Approved</li>
-                <li>Courses: MBA, PGDM, BBA</li>
-            </ul>
-            <a href="#" class="mt-4 block text-center bg-primary-blue text-white py-2 rounded-lg hover:bg-blue-600 transition duration-150 text-sm font-medium">View Details</a>
-        </div>
+    <form id="collegeForm">
+      <div>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required />
+      </div>
 
-        <!-- Card 4: Arts & Science College -->
-        <div class="bg-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 p-6 border-t-4 border-purple-500 transform hover:-translate-y-1">
-            <div class="flex items-center mb-3">
-                <span class="text-3xl text-purple-600 mr-3">🎨</span>
-                <h4 class="text-xl font-semibold text-gray-900">Kanpur Liberal Arts University</h4>
-            </div>
-            <p class="text-sm text-gray-500 mb-2">Arts, Humanities, and Science</p>
-            <p class="text-lg font-bold text-secondary-green mb-4">₹ 50k / Year</p>
-            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
-                <li>Rank: Excellent Faculty</li>
-                <li>Accreditation: State University</li>
-                <li>Courses: BA, BSc, MA, PhD</li>
-            </ul>
-            <a href="#" class="mt-4 block text-center bg-primary-blue text-white py-2 rounded-lg hover:bg-blue-600 transition duration-150 text-sm font-medium">View Details</a>
-        </div>
+      <div>
+        <label for="email">Email / Phone</label>
+        <input type="text" id="email" placeholder="Enter your contact info" required />
+      </div>
 
-        <!-- Card 5: Engineering College (Tier 2) -->
-        <div class="bg-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 p-6 border-t-4 border-red-500 transform hover:-translate-y-1">
-            <div class="flex items-center mb-3">
-                <span class="text-3xl text-red-600 mr-3">⚙️</span>
-                <h4 class="text-xl font-semibold text-gray-900">Ghaziabad Polytechnic Institute</h4>
-            </div>
-            <p class="text-sm text-gray-500 mb-2">Technical College</p>
-            <p class="text-lg font-bold text-secondary-green mb-4">₹ 70k / Year</p>
-            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
-                <li>Rank: Good Placement Record</li>
-                <li>Affiliation: BTE</li>
-                <li>Courses: Diploma, B.Tech (Mech, Civil)</li>
-            </ul>
-            <a href="#" class="mt-4 block text-center bg-primary-blue text-white py-2 rounded-lg hover:bg-blue-600 transition duration-150 text-sm font-medium">View Details</a>
-        </div>
+      <div>
+        <label for="class10">10th Marks (%)</label>
+        <input type="number" id="class10" placeholder="e.g. 85" required />
+      </div>
 
-        <!-- Card 6: Pharmacy College -->
-        <div class="bg-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 p-6 border-t-4 border-cyan-500 transform hover:-translate-y-1">
-            <div class="flex items-center mb-3">
-                <span class="text-3xl text-cyan-600 mr-3">💊</span>
-                <h4 class="text-xl font-semibold text-gray-900">Agra College of Pharmaceutical Sciences</h4>
-            </div>
-            <p class="text-sm text-gray-500 mb-2">Specialized Pharma Institute</p>
-            <p class="text-lg font-bold text-secondary-green mb-4">₹ 120k / Year</p>
-            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
-                <li>Rank: Leading D. Pharma</li>
-                <li>Accreditation: PCI Approved</li>
-                <li>Courses: D. Pharma, B. Pharma, M. Pharma</li>
-            </ul>
-            <a href="#" class="mt-4 block text-center bg-primary-blue text-white py-2 rounded-lg hover:bg-blue-600 transition duration-150 text-sm font-medium">View Details</a>
-        </div>
+      <div>
+        <label for="class12">12th Marks (%)</label>
+        <input type="number" id="class12" placeholder="e.g. 90" required />
+      </div>
 
-    </div>
-</div>
+      <div>
+        <label for="exam">Entrance Exam</label>
+        <input type="text" id="exam" placeholder="e.g. JEE, NEET, CUET" />
+      </div>
 
+      <div>
+        <label for="score">Exam Score / Rank</label>
+        <input type="text" id="score" placeholder="e.g. 1234 or 95%" />
+      </div>
 
+      <div>
+        <label for="course">Preferred Course</label>
+        <select id="course" required>
+          <option value="">Select</option>
+          <option value="engineering">Engineering</option>
+          <option value="medical">Medical</option>
+          <option value="commerce">Commerce</option>
+          <option value="arts">Arts</option>
+          <option value="law">Law</option>
+          <option value="management">Management</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="location">Preferred Location</label>
+        <input type="text" id="location" placeholder="City / State" />
+      </div>
+
+      <div>
+        <label for="budget">Budget Range (₹ per year)</label>
+        <input type="text" id="budget" placeholder="e.g. 50,000 – 2,00,000" />
+      </div>
+
+      <div>
+        <label for="collegeType">College Type</label>
+        <select id="collegeType">
+          <option value="">Select</option>
+          <option value="government">Government</option>
+          <option value="private">Private</option>
+          <option value="any">Any</option>
+        </select>
+      </div>
+
+      <div class="full-width">
+        <label for="distance">Distance Preference</label>
+        <select id="distance">
+          <option value="near">Near Home</option>
+          <option value="any">Any Location</option>
+          <option value="specific">Specific State</option>
+        </select>
+      </div>
+
+      <div class="full-width" style="text-align: center; margin-top: 1rem;">
+        <button type="submit">Find My Colleges</button>
+      </div>
+    </form>
+  </section>
+        
 
 
 
 
+        <div>
+        <div class="w-full max-w-3xl bg-gray-50 p-6 md:p-8 rounded-xl mb-12">
+        <h3 class="text-2xl font-bold text-gray-700 text-center mb-6 border-b pb-4 border-gray-300">
+            📍 Colleges in Uttar Pradesh - Map View
+        </h3>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <!-- -----------------------------------map---------------------------------
-   -->
-
-   </form>
-    </div>
-
-    <div class="college-map-container">
-        <h3>📍 Colleges in Uttar Pradesh - Map View</h3>
-
-        <div id="up-map-location">
+        <div id="up-map-location" class="shadow-xl">
+            <!-- Google Maps Embed for the general region of Uttar Pradesh -->
             <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19001382.49206249!2d75.75338604726207!3d26.541315682894563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3998f465c49048a1%3A0x6e2671239c0d381b!2sUttar%20Pradesh!5e0!3m2!1sen!2sin!4v1699999999999!5m2!1sen!2sin" 
-                width="100%" 
-                height="450" 
-                style="border:0;" 
+                title="Map of Uttar Pradesh"
                 allowfullscreen="" 
                 loading="lazy" 
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
-        <p class="map-note">
-            *This map shows the general location of Uttar Pradesh. For a map with specific college markers, you can create a <a href="https://www.google.com/mymaps" target="_blank">Google My Map</a> and embed it here.
+        <p class="text-center text-xs text-gray-500 mt-4">
+            *This map shows the general location of Uttar Pradesh. Actual college markers will appear here after search.
         </p>
+        </div>
+    
+    <div id="color3">
+    <section class="section-padding" id="results-section">
+        <div id="results-section" class="w-full max-w-5xl px-4">
+        <h3 class="text-3xl font-bold text-gray-800 text-center mb-8 border-b-4 border-secondary-green/50 pb-4">
+            Showing 6 Top Colleges in Uttar Pradesh
+        </h3>
+
+        <!-- Responsive Grid for College Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Card 1: Leading University -->
+            <div class="bg-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 p-6 border-t-4 border-primary-blue transform hover:-translate-y-1">
+                <div class="flex items-center mb-3">
+                    <span class="text-3xl text-primary-blue mr-3">🎓</span>
+                    <h4 class="text-xl font-semibold text-gray-900">Institute of Technology, Lucknow</h4>
+                </div>
+                <p class="text-sm text-gray-500 mb-2">Public Engineering College</p>
+                <p class="text-lg font-bold text-secondary-green mb-4">₹ 95k / Year</p>
+                <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+                    <li>Rank: #5 in UP Engineering</li>
+                    <li>Accreditation: NAAC 'A' Grade</li>
+                    <li>Courses: B.Tech, M.Tech (CSE, ECE)</li>
+                </ul>
+                <a href="#" class="mt-4 block text-center bg-primary-blue text-white py-2 rounded-lg hover:bg-blue-600 transition duration-150 text-sm font-medium">View Details</a>
+            </div>
+
+            <!-- Card 2: Private Medical College -->
+            <div class="bg-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 p-6 border-t-4 border-secondary-green transform hover:-translate-y-1">
+                <div class="flex items-center mb-3">
+                    <span class="text-3xl text-secondary-green mr-3">⚕️</span>
+                    <h4 class="text-xl font-semibold text-gray-900">Dr. Ram Institute of Medical Sciences</h4>
+                </div>
+                <p class="text-sm text-gray-500 mb-2">Private Medical Institution</p>
+                <p class="text-lg font-bold text-secondary-green mb-4">₹ 350k / Year</p>
+                <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+                    <li>Rank: Top 10 Private MBBS</li>
+                    <li>Affiliation: State Medical University</li>
+                    <li>Courses: MBBS, MD, Nursing</li>
+                </ul>
+                <a href="#" class="mt-4 block text-center bg-primary-blue text-white py-2 rounded-lg hover:bg-blue-600 transition duration-150 text-sm font-medium">View Details</a>
+            </div>
+
+            <!-- Card 3: Management Institute -->
+            <div class="bg-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 p-6 border-t-4 border-yellow-500 transform hover:-translate-y-1">
+                <div class="flex items-center mb-3">
+                    <span class="text-3xl text-yellow-600 mr-3">💼</span>
+                    <h4 class="text-xl font-semibold text-gray-900">Noida School of Business Studies</h4>
+                </div>
+                <p class="text-sm text-gray-500 mb-2">Premier Management College</p>
+                <p class="text-lg font-bold text-secondary-green mb-4">₹ 210k / Year</p>
+                <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+                    <li>Rank: Top 3 BBA/MBA</li>
+                    <li>Accreditation: AICTE Approved</li>
+                    <li>Courses: MBA, PGDM, BBA</li>
+                </ul>
+                <a href="#" class="mt-4 block text-center bg-primary-blue text-white py-2 rounded-lg hover:bg-blue-600 transition duration-150 text-sm font-medium">View Details</a>
+            </div>
+
+            <!-- Card 4: Arts & Science College -->
+            <div class="bg-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 p-6 border-t-4 border-purple-500 transform hover:-translate-y-1">
+                <div class="flex items-center mb-3">
+                    <span class="text-3xl text-purple-600 mr-3">🎨</span>
+                    <h4 class="text-xl font-semibold text-gray-900">Kanpur Liberal Arts University</h4>
+                </div>
+                <p class="text-sm text-gray-500 mb-2">Arts, Humanities, and Science</p>
+                <p class="text-lg font-bold text-secondary-green mb-4">₹ 50k / Year</p>
+                <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+                    <li>Rank: Excellent Faculty</li>
+                    <li>Accreditation: State University</li>
+                    <li>Courses: BA, BSc, MA, PhD</li>
+                </ul>
+                <a href="#" class="mt-4 block text-center bg-primary-blue text-white py-2 rounded-lg hover:bg-blue-600 transition duration-150 text-sm font-medium">View Details</a>
+            </div>
+
+            <!-- Card 5: Engineering College (Tier 2) -->
+            <div class="bg-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 p-6 border-t-4 border-red-500 transform hover:-translate-y-1">
+                <div class="flex items-center mb-3">
+                    <span class="text-3xl text-red-600 mr-3">⚙️</span>
+                    <h4 class="text-xl font-semibold text-gray-900">Ghaziabad Polytechnic Institute</h4>
+                </div>
+                <p class="text-sm text-gray-500 mb-2">Technical College</p>
+                <p class="text-lg font-bold text-secondary-green mb-4">₹ 70k / Year</p>
+                <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+                    <li>Rank: Good Placement Record</li>
+                    <li>Affiliation: BTE</li>
+                    <li>Courses: Diploma, B.Tech (Mech, Civil)</li>
+                </ul>
+                <a href="#" class="mt-4 block text-center bg-primary-blue text-white py-2 rounded-lg hover:bg-blue-600 transition duration-150 text-sm font-medium">View Details</a>
+            </div>
+
+            <!-- Card 6: Pharmacy College -->
+            <div class="bg-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 p-6 border-t-4 border-cyan-500 transform hover:-translate-y-1">
+                <div class="flex items-center mb-3">
+                    <span class="text-3xl text-cyan-600 mr-3">💊</span>
+                    <h4 class="text-xl font-semibold text-gray-900">Agra College of Pharmaceutical Sciences</h4>
+                </div>
+                <p class="text-sm text-gray-500 mb-2">Specialized Pharma Institute</p>
+                <p class="text-lg font-bold text-secondary-green mb-4">₹ 120k / Year</p>
+                <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+                    <li>Rank: Leading D. Pharma</li>
+                    <li>Accreditation: PCI Approved</li>
+                    <li>Courses: D. Pharma, B. Pharma, M. Pharma</li>
+                </ul>
+                <a href="#" class="mt-4 block text-center bg-primary-blue text-white py-2 rounded-lg hover:bg-blue-600 transition duration-150 text-sm font-medium">View Details</a>
+            </div>
+
+        </div>
     </div>
-  
-    
-	
+    </section>
+    </div>
 
-
-
-
-
-
-
-
-
-
-
-	
-	<h3>hello</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quis voluptatem officia quidem nisi placeat molestias quae iste voluptatum consectetur, numquam nobis consequuntur doloribus possimus magni ad a recusandae sed!
-    Aut ab, deserunt consequatur vero dolorem id dolorum, voluptas animi et atque eaque labore reprehenderit ullam quo nemo maxime porro ea suscipit. Odit nam consectetur ducimus quas eveniet, iste ex?
-    Nulla distinctio culpa dolor temporibus qui illo quia? Voluptate architecto numquam illo molestias fugit dolores, accusantium consequatur repudiandae aliquid alias labore sint eius, repellat suscipit beatae deserunt excepturi eaque! Voluptate.
-    Mollitia ea cumque, earum sunt soluta corporis in porro omnis at quidem iusto odit quasi error odio laborum quibusdam sint. Quisquam iste atque aperiam unde quos reprehenderit tenetur vel molestiae.</p>
-	
-
-
-
-
-
-
-	
-    
-    
 
 
     
-  <!-- -------------------------------footer--------------------------------- -->
+    <section class="section-padding" id="hello-section">
+        <h3>hello</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quis voluptatem officia quidem nisi placeat molestias quae iste voluptatum consectetur, numquam nobis consequuntur doloribus possimus magni ad a recusandae sed! Aut ab, deserunt consequatur vero dolorem id dolorum, voluptas animi et atque eaque labore reprehenderit ullam quo nemo maxime porro ea suscipit. Odit nam consectetur ducimus quas eveniet, iste ex? Nulla distinctio culpa dolor temporibus qui illo quia? Voluptate architecto numquam illo molestias fugit dolores, accusantium consequatur repudiandae aliquid alias labore sint eius, repellat suscipit beatae deserunt excepturi eaque! Voluptate. Mollitia ea cumque, earum sunt soluta corporis in porro omnis at quidem iusto odit quasi error odio laborum quibusdam sint. Quisquam iste atque aperiam unde quos reprehenderit tenetur vel molestiae.</p>
+    </section>
 
-    <footer>
+
+
+
+    <div id="color4">
+    <footer id="contact">
         <div class="footer-col">
             <h4>products</h4>
             <ul>
@@ -623,20 +853,8 @@
             </div>
         </div>
     </footer>
-
+    </div>
     
-
-
-
-
-    
-    
-
-
-
-
-
-
-<script src="javascript.js"></script>
+    <script src="javascript.js"></script>
 </body>
 </html>
